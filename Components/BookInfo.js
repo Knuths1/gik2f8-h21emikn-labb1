@@ -1,11 +1,11 @@
 const BookInfo = (book) => {
     //console.log(book)
     let html = `
-              <div class="book-info -ml-52">
-                <div class="rounded-md border-2 border-black bg-gray-400 w-full mx-auto w-44">
+              <div class="book-info -ml-80">
+                <div class="rounded-md border-2 border-black bg-gray-400 w-full mx-auto w-60">
                  <div class="p-3">
                   <img src= "${book.coverImage}"/>
-                    <div>------------------------</div>
+                    <div>-------------------------------------</div>
                       <div>Author: ${book.author}</div>
                         <div>Title: ${book.title}</div>
                           <div>Pages: ${book.pages}</div>
