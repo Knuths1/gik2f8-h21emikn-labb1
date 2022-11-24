@@ -1,22 +1,21 @@
 const BookInfo = (book) => {
-    console.log(book)
+    //console.log(book)
     let html = `
-              <div class="book-info">
-                <div class=" rounded-md border-2 border-blue-400 bg-white w-full mx-auto w-40">
-                <div class="">
-                  <div class="">
-                    <div class="">
-                      <img src= "${book.coverImage}"/>
-                      <div class="">
-                        <span class="">Author: ${book.author}</span>
-                        <span class="">Title: ${book.title}</span>
-                        <span class="">Pages: ${book.pages}</span>
-                        <span class="">Release Date: ${book.releaseDate}</span>
+              <div class="book-info -ml-52">
+                <div class="rounded-md border-2 border-black bg-gray-400 w-full mx-auto w-44">
+                 <div class="p-3">
+                  <img src= "${book.coverImage}"/>
+                    <div>------------------------</div>
+                      <div>Author: ${book.author}</div>
+                        <div>Title: ${book.title}</div>
+                          <div>Pages: ${book.pages}</div>
+                            <div>Release Date: ${book.releaseDate}</span>
+                          <div>
+                        <div>
                       </div> 
                     </div>
                   </div>
-                </div>
-                </div>
+                  </div>
               </div>`;
     return html;
 
