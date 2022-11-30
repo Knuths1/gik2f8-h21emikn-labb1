@@ -1,7 +1,6 @@
 "use strict";
 
 let bookList = [];
-
 window.addEventListener("load", () => {
   getAll().then((apiBooks) => (bookList = apiBooks));
 });
@@ -29,8 +28,13 @@ function renderBookList(bookList) {
   var elements = document.getElementsByClassName("point");
   for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener("mouseover", (e) => {
-      const rutan = `<div id="bookDetail" class="position absolute"></div>`;
-      root.insertAdjacentHTML("beforeend", rutan);
+      //var e = window.event;
+      //let x_pos = e.clientX;
+      //console.log(x_pos);
+      //let y_pos = e.clientY;
+      //const megaroot = document.getElementById("megaroot");
+      const rutan = `<div id="bookDetail" class="position absolute top-500px"></div>`;
+      root.insertAdjacentHTML("afterbegin", rutan);
 
       let myBook = getOne(e.target.id);
       myBook.then(function (result) {

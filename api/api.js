@@ -1,4 +1,4 @@
-const url = 'https://gik2f8-labs.herokuapp.com/books';
+const url = "https://gik2f8-labs.herokuapp.com/books";
 
 async function getAll() {
   const result = await fetch(url)
@@ -9,23 +9,8 @@ async function getAll() {
 }
 
 async function getOne(id) {
-  //console.log(id)
-  //resultat = ""
-  const result = await fetch(url+"/"+id)
+  const result = await fetch(url + "/" + id)
     .then((result) => result.json())
     .catch((e) => e);
-  
-    // result.forEach(element => {
-    //   if (element.id == id){
-    //     //console.log(element)
-    //     resultat = element
-    //     //console.log(resultat)
-    //     //return resultat;
-    //   }
-    //});
-    //console.log(resultat);
-    //return resultat;
-    return result;
-
+  return result;
 }
-
