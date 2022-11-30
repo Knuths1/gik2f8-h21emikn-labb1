@@ -28,12 +28,10 @@ function renderBookList(bookList) {
   var elements = document.getElementsByClassName("point");
   for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener("mouseover", (e) => {
-      //var e = window.event;
-      //let x_pos = e.clientX;
-      //console.log(x_pos);
-      //let y_pos = e.clientY;
-      //const megaroot = document.getElementById("megaroot");
-      const rutan = `<div id="bookDetail" class="position absolute top-500px"></div>`;
+      var e = window.event;
+      let x_pos = e.clientX + 30;
+      let y_pos = e.clientY - 60;
+      const rutan = `<div id="bookDetail" class="position absolute top-500px"  style="position: absolute; top: ${y_pos}px; left: ${x_pos}px; opacity: 0.9;"></div>`;
       root.insertAdjacentHTML("afterbegin", rutan);
 
       let myBook = getOne(e.target.id);
@@ -42,19 +40,20 @@ function renderBookList(bookList) {
       });
     });
     elements[i].addEventListener("mouseout", (e) => {
-      const insert = document.getElementById("bookDetail");
-      const existingElement = document.querySelector(".book-info");
-      existingElement && insert.removeChild(existingElement);
+      const rutan = document.getElementById("bookDetail");
+      //const existingElement = document.querySelector(".book-info");
+      //existingElement && remove.removeChild(existingElement);
+      rutan.remove(rutan);
     });
   }
 }
 
 function renderBookItem(book) {
-  //const rutan = `<div id="bookDetail" class="position absolute"></div>`;
-  //root.insertAdjacentHTML("beforeend", rutan);
   const existingElement = document.querySelector(".book-info");
   const insert = document.getElementById("bookDetail");
-  existingElement && insert.removeChild(existingElement);
-  let minhtml = BookInfo(book);
-  insert.insertAdjacentHTML("afterbegin", minhtml);
+  if (insert != null) {
+    existingElement && insert.removeChild(existingElement);
+    let minhtml = BookInfo(book);
+    insert.insertAdjacentHTML("afterbegin", minhtml);
+  }
 }
