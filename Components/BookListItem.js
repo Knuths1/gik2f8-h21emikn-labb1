@@ -1,5 +1,4 @@
 const BookListItem = (book) => {
-  
   let html = `<li
                 class="point book-list__item mb-2 mx-2 last:mb-0 
                 p-3 text-black last:border-b-0 border-b 
@@ -8,6 +7,3 @@ const BookListItem = (book) => {
               </li>`;
   return html;
 };
-
-
-//onmouseenter='renderBookItem(bookList[6])'>

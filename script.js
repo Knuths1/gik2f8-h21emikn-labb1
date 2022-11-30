@@ -41,8 +41,6 @@ function renderBookList(bookList) {
     });
     elements[i].addEventListener("mouseout", (e) => {
       const rutan = document.getElementById("bookDetail");
-      //const existingElement = document.querySelector(".book-info");
-      //existingElement && remove.removeChild(existingElement);
       rutan.remove(rutan);
     });
   }
