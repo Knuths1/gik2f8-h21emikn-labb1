@@ -25,7 +25,7 @@ function renderBookList(bookList) {
     searchField.value &&
     root.insertAdjacentHTML("beforeend", BookList(bookList));
 
-  var elements = document.getElementsByClassName("point");
+  let elements = document.getElementsByClassName("point");
   for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener("mouseover", (e) => {
       var e = window.event;
@@ -41,7 +41,7 @@ function renderBookList(bookList) {
     });
     elements[i].addEventListener("mouseout", (e) => {
       const rutan = document.getElementById("bookDetail");
-      rutan.remove(rutan);
+      rutan.remove();
     });
   }
 }

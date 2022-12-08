@@ -1,5 +1,4 @@
 const BookInfo = (book) => {
-  // -ml-80 som klass
   let html = `
               <div class="book-info"> 
                 <div class="rounded-md border-2 border-black bg-gray-400 w-full mx-auto w-60">
